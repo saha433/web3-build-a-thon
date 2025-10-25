@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Lender Portal</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-left">
+      <h1>Lender Portal</h1>
+    </div>
+    <div class="nav-right">
+      <a class="btn secondary" href="index.html">Home</a>
+      <a class="btn secondary" href="#openRequests">Open Loan Requests</a>
+      <a class="btn secondary" href="#yourLoans">Your Funded Loans</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <h2>Welcome, Lender</h2>
+    <p>Browse available loan requests and fund the ones that match your interest.</p>
+    <button id="connectWallet" class="btn primary">Connect Wallet</button>
+    <p id="walletAddress" class="wallet-address"></p>
+  </header>
+
+  <section id="openRequests" class="features">
+    <h3>📢 Open Loan Requests</h3>
+    <div id="loanRequests"></div>
+  </section>
+
+  <section id="yourLoans" class="features">
+    <h3>💼 Your Funded Loans</h3>
+    <div id="yourFundedLoans"></div>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2025 P2P Lending Platform. All rights reserved.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/ethers/dist/ethers.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

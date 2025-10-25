@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Borrower Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background-color: #f8fafc;
+    }
+
+    .navbar {
+      background-color: #07101e;
+      color: white;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .navbar h1 {
+      margin: 0;
+      font-size: 1.4rem;
+    }
+
+    .dashboard-container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+.credit-score {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  margin-bottom: 40px;
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+    .credit-score h2 {
+      margin-top: 10px;
+      font-size: 2rem;
+      color: #1e3a8a;
+    }
+
+    .dashboard-section {
+      background: #ffffff;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      margin-bottom: 30px;
+    }
+
+    .dashboard-section h3 {
+      color: #1e3a8a;
+      margin-bottom: 16px;
+    }
+
+    .dashboard-section p {
+      color: #374151;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="navbar">
+    <h1>Borrower Dashboard</h1>
+    <div>
+      <a href="index.html" class="btn secondary">Home</a>
+      <a href="signin.html" class="btn primary">Logout</a>
+    </div>
+  </div>
+
+  <div class="dashboard-container">
+
+    <!-- Credit Score Gauge -->
+    <div class="credit-score">
+      <canvas id="creditScoreGauge" width="200" height="100"></canvas>
+      <h2>803</h2>
+      <p style="color: green; font-weight: bold;">▲ +6 pts this month</p>
+    </div>
+
+    <!-- Application Status -->
+    <div class="dashboard-section">
+      <h3>Application Status</h3>
+      <p>Status: <strong>Approved</strong></p>
+      <p>Loan Amount: ₹1,00,000</p>
+      <p>Repayment Duration: 12 months</p>
+    </div>
+
+    <!-- Repayment Schedule -->
+    <div class="dashboard-section">
+      <h3>Repayment Schedule</h3>
+      <ul>
+        <li>EMI 1: ₹8,500 - Paid</li>
+        <li>EMI 2: ₹8,500 - Paid</li>
+        <li>EMI 3: ₹8,500 - Due Apr 20</li>
+      </ul>
+    </div>
+
+    <!-- Messages -->
+    <div class="dashboard-section">
+      <h3>Messages</h3>
+      <p>You have no new messages.</p>
+    </div>
+
+  </div>
+
+  <!-- Gauge Chart Script -->
+  <script>
+    const ctx = document.getElementById('creditScoreGauge').getContext('2d');
+    const gaugeChart = new Chart(ctx, {
+      type: 'doughnut',
+      data: {
+        labels: ['Poor', 'Fair', 'Good', 'Excellent'],
+        datasets: [{
+          data: [160, 120, 120, 110],
+          backgroundColor: ['#ef4444', '#facc15', '#4ade80', '#22c55e'],
+          borderWidth: 0,
+          cutout: '75%',
+          rotation: -90,
+          circumference: 180
+        }]
+      },
+      options: {
+        responsive: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: { enabled: false }
+        }
+      }
+    });
+  </script>
+
+</body>
+</html>

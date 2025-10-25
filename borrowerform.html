@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Borrower Portal</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-left">
+      <h1>Borrower Portal</h1>
+    </div>
+    <div class="nav-right">
+      <a class="btn secondary" href="index.html">Home</a>
+    </div>
+  </nav>
+
+  <section class="form-section">
+    <h2>Request a Loan</h2>
+    <form id="loanRequestForm">
+      <input type="number" id="loanAmount" placeholder="Amount (ETH)" required />
+      <input type="number" id="loanInterest" placeholder="Interest (%)" required />
+      <input type="number" id="loanDuration" placeholder="Duration (seconds)" required />
+      <button class="btn primary" type="submit">Submit Loan Request</button>
+    </form>
+  </section>
+
+  <section class="history-section">
+    <h2>Your Loan History</h2>
+    <div id="loanHistoryContainer"></div>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>

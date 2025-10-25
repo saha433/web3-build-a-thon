@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>P2P Lending</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <nav class="navbar">
+  <div class="navbar-left">
+    <img src="logo.png" alt="P2P Lending Logo" class="logo" />
+    <h1>P2P Lending</h1>
+  </div>
+  <div class="nav-right">
+    <a href="signin.html" class="btn secondary">Sign In</a>
+    <a href="signup.html" class="btn secondary">Sign Up</a>
+    <a href="borrowerform.html" class="btn secondary">Borrower Registration</a>
+    <a href="lender.html" class="btn secondary">Lender Registration</a>
+  </div>
+</nav>
+
+
+  <section class="hero">
+    <h2>Revolutionize Lending with Decentralized Finance</h2>
+    <p>
+      Connect directly with lenders, build your credit transparently, and take control of your financial future.
+    </p>
+    <div class="cta-buttons">
+      <a href="#" class="btn primary big" id="connectWallet">Connect Wallet</a>
+      <a href="borrowerform.html" class="btn secondary big">Apply for Loan</a>
+      <a href="lender.html" class="btn secondary big">Become a Lender</a>
+    </div>
+    <p id="userAddress" style="margin-top: 10px; font-weight: bold;"></p>
+    <p id="creditScore" style="margin-top: 8px; color: #4338ca;"></p>
+  </section>
+
+  <section class="features">
+    <div class="feature">
+      <h3>📈 Transparent Credit Scoring</h3>
+      <p>Smart algorithms assess your creditworthiness fairly based on your real financial data.</p>
+    </div>
+    <div class="feature">
+      <h3>🔗 True Peer-to-Peer Lending</h3>
+      <p>No banks. No middlemen. Just borrowers and lenders making deals directly on the platform.</p>
+    </div>
+    <div class="feature">
+      <h3>🔐 Privacy & Security</h3>
+      <p>Control your data with optional uploads, secure connections, and decentralized logic.</p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    &copy; 2025 P2P Lending. All rights reserved.
+  </footer>
+
+  <!-- Load ethers.js from CDN -->
+<script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"></script>
+
+<!-- Your custom JS -->
+<script src="app.js"></script>
+
+
+</body>
+</html>
